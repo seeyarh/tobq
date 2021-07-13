@@ -263,6 +263,7 @@ dependencies = [
 [[package]]
 name = "gcp-bigquery-client"
 version = "0.9.0"
+source = "git+https://github.com/lquerel/gcp-bigquery-client.git#0bc91c1c468d597037f1b4f91a18e560bc1ac46a"
 dependencies = [
  "chrono",
  "hyper",

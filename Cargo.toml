@@ -6,7 +6,7 @@ edition = "2018"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-gcp-bigquery-client = { path = "/home/seeyarh/src/github.com/seeyarh/gcp-bigquery-client" }
+gcp-bigquery-client = { git = "https://github.com/lquerel/gcp-bigquery-client.git" }
 tokio = { version = "1.2.0", features = ["full"] }
 tokio-stream = {  version = "0.1.7", features = ["io-util"] }
 serde = "1.0.123"
