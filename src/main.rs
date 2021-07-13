@@ -62,5 +62,10 @@ async fn main() -> Result<(), BQError> {
         }
     }
 
+    client
+        .tabledata()
+        .insert_all(project_id, dataset_id, table_id, insert_request)
+        .await?;
+
     Ok(())
 }
