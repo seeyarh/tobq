@@ -1188,6 +1188,7 @@ dependencies = [
  "chrono",
  "clap",
  "gcp-bigquery-client",
+ "rand",
  "serde",
  "serde_json",
  "tokio",
