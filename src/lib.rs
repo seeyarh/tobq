@@ -91,6 +91,7 @@ async fn read_stream<R: AsyncBufRead + Unpin>(
                 }
             },
             _ = sleep(timeout) => {
+                if cur_batch_size > 0 {
                     info!(cur_batch_size, "calling insert with batch size after timeout");
                     client
                         .tabledata()
@@ -100,6 +101,7 @@ async fn read_stream<R: AsyncBufRead + Unpin>(
 
                     insert_request = TableDataInsertAllRequest::new();
                     cur_batch_size = 0;
+                }
             },
         }
     }
